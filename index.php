@@ -1,10 +1,20 @@
 <?php
 
-include('config.php');
+            include('config.php');
 
-
+            if(isset($_POST['submit']))
+    {
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+            $query = mysqli_query($conn, "INSERT INTO login (email, senha) VALUES ('$email', '$senha')");
+    }
+        if($query){
+        echo 'Cadastro realizado com sucesso';
+        }else {
+        echo 'Falha ao realizar cadastro';
+        }
+            
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
