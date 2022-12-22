@@ -25,7 +25,7 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="index.php" method="POST">
     <p>     
         <label>Email:</label>
             <input type="text" name="email">
