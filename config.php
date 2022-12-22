@@ -4,7 +4,7 @@
     $dbPassword = '2die4100';
     $dbname = 'crudteste';
 
-    $conn = new mysqli($dbHost,$dbUsername,$dbPassword,$dbname);
+    $conn = mysqli_connect($dbHost,$dbUsername,$dbPassword,$dbname) or die ('Erro de conexão');
 
     if($conn->connect_errno)
     {
