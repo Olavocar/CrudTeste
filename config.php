@@ -1,8 +1,8 @@
 <?php
     $dbHost = 'db4free.net:3306';
-    $dbUsername = 'volaolavo';
-    $dbPassword = '2die4100';
-    $dbname = 'crudteste';
+    $dbUsername = 'volaodarj';
+    $dbPassword = '26ec018b';
+    $dbname = 'darj';
 
     $conn = new mysqli($dbHost,$dbUsername,$dbPassword,$dbname);
 
