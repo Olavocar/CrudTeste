@@ -2,7 +2,7 @@
 
             include('config.php');
 
-            if(isset($_POST['submit']));
+            if(isset($_POST['submit']))
     {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
