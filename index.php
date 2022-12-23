@@ -6,7 +6,7 @@
     {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
-            $query = mysqli_query($conn, "INSERT INTO login (email, senha) VALUES ('$email', '$senha')");
+            $query = mysqli_query($conn. "INSERT INTO login (email, senha) VALUES ('$email', '$senha')");
     }
         if($query){
         echo 'Cadastro realizado com sucesso';
@@ -25,7 +25,7 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="index.php" method="POST">
+    <form action="" method="POST">
     <p>     
         <label>Email:</label>
             <input type="text" name="email">
