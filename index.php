@@ -1,19 +1,5 @@
 <?php
-
-            include('config.php');
-
-            if(isset($_POST['submit']))
-    {
-            $email = $_POST['email'];
-            $senha = $_POST['senha'];
-            $query = mysqli_query($conn, "INSERT INTO login (email, senha) VALUES ('$email', '$senha')");
-    }
-        if($query){
-        echo 'Cadastro realizado com sucesso';
-        }else {
-        echo 'Falha ao realizar cadastro';
-        }
-            
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -26,15 +12,25 @@
     <title>Login</title>
 </head>
 <body>
+<?php
+        if(isset($_SESSION['nao_autenticado'])):
+        ?>
+        <div class="notification is-danger">
+        <p>ERRO: Usuário ou senha inválidos.</p>
+        </div>
+        <?php
+        endif;
+        unset($_SESSION['nao_autenticado']);
+        ?>
     <div class="box">
     <form action="" method="POST">
     <p>     
         <label>Email:</label>
-            <input type="text" name="email">
+            <input type="text" name="email" placeholder="Digite seu email">
     </p>
     <p>     
         <label>senha:</label>
-            <input type="password" name="senha">
+            <input type="password" name="senha" placeholder="Digite sua senha">
     </p>
     <p>
             <button type="submit">Entrar</button>
