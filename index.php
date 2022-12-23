@@ -6,7 +6,7 @@
     {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
-            $query = mysqli_query($conn. "INSERT INTO login (email, senha) VALUES ('$email', '$senha')");
+            $query = mysqli_query($conn, "INSERT INTO login (email, senha) VALUES ('$email', '$senha')");
     }
         if($query){
         echo 'Cadastro realizado com sucesso';
